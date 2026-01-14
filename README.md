@@ -3,12 +3,8 @@
 
 --------------------
 ### First you have to download:
-1-	XAMPP
-2-	MySQL m MySQL workbench 
-3-	Postman
-4-	Heroku
-5-	Composer
-6-	Git
+    XAMPP, MySQL, MySQL workbench 
+    Postman, Heroku, Composer, Git
 --------------------
 ### You have to install Laravel
 ````laravel
@@ -16,7 +12,7 @@ Composer global require “Laravel/install”
 Composer create-project –prefer-dist Laravel/Laravel (project name)
 ````
 --------------------
-###Prepare Heroku (Cloud):
+### Prepare Heroku (Cloud):
 ````laravel
 Heroku create
 Heroku logout
@@ -41,16 +37,11 @@ Git push heroku master
 ````
 --------------------
 ### In mysql workbench :
-1-	New connection
-2-	New schema
-
+New connection, New schema
 Also in .env file , edit ( Database , username , password)
 
 --------------------
 
-````laravel
-Php artisan migrate
-````
 
 ### Inside of Heroku cloud:
 Go resource and do add-ons and chose clearDB
@@ -65,14 +56,14 @@ Php artisan migrate
 ````
 
 If you found error ( key too long , max lenth …etc )
-1-	Fo to migration both (create_users, create_password)
-2-	Go to public function up()
+  1- Fo to migration both (create_users, create_password)
+  2- Go to public function up()
 Write 
 ````laravel
 Schema::defultStringLenght(191);
 ````
-3-	Go to workbench , Drop (migration , users)
-4-	Then do 
+  3- Go to workbench , Drop (migration , users)
+  4- Then do 
 ````laravel
 Php artisan migrate
 Git add.
@@ -81,12 +72,12 @@ Git push heroku master
 ````
 
 --------------------
-in bash
-1-
+### To creat JWT , write in bash
+
 ````laravel
 Composer require Tymon/jwt-auth
 ````
-2- Inside in file config/app.php in providers , write:
+Inside in file config/app.php in providers , write:
 ````laravel
 ’Tymon\JWTAuth\Providers\JWTAuthServiceProvider’;
 ````
@@ -95,12 +86,11 @@ In aliases , write:
 ‘JWTAuth’=> ‘Tymon\JWTAuth\Facades\JWTAuth’
 ‘JWTFactory’=> ‘Tymon\JWTAuth\Facades\JWTFactory’
 ````
-
-3-	And write in terminal:
+ And write in terminal:
 ````laravel
 Php artisan vendor:publish—provider=’Tymon\JWTAuth\Providers\JWTAuthServiceProvider’
 ````
-4-	And write 
+ And write 
 ````laravel
 Php artisan jwt:generate
 ````
@@ -124,10 +114,10 @@ Php artisan migrate
 
 
 --------------------
-Lesson 7- Make controller 
+### Lesson 7- Make controller 
 
 Inside controller:
-
+````laravel
 Use App\Http\Controllers\Controller;
 Use App\User;
 Use JWTFactory;
