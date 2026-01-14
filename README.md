@@ -1,5 +1,5 @@
 # laravel-API-with-JWT-CRUD
-## Laravel API with JWT CRUD
+## Laravel API with JWT & CRUD & Heroku 
 
 --------------------
 ### First you have to download:
