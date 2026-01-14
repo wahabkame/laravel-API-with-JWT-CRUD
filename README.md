@@ -3,8 +3,9 @@
 
 --------------------
 ### First you have to download:
-    XAMPP, MySQL, MySQL workbench 
-    Postman, Heroku, Composer, Git
+XAMPP, MySQL, MySQL workbench 
+Postman, Heroku, Composer, Git
+
 --------------------
 ### You have to install Laravel
 ````laravel
@@ -114,7 +115,7 @@ Php artisan migrate
 
 
 --------------------
-### Lesson 7- Make controller 
+###  Make controller 
 
 Inside controller:
 ````laravel
